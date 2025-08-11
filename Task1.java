@@ -6,9 +6,14 @@ public class Task1 {
     // This method takes only 1 parameter which is root
     // You'll need to create a new Mirrored Tree and return the new root
     public static BTNode convertMirror( BTNode root ){
-        // TO DO
-        return null; //remove this line
+        if(root == null){
+            return null;
+        }
+        BTNode mirror = new BTNode(root.elem);
+        mirror.left = convertMirror(root.right);
+        mirror.right = convertMirror(root.left);
+        return mirror; //remove this line
     }
-
+    //==================================================
 
 }
