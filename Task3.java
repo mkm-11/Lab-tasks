@@ -22,8 +22,8 @@ public class Task3 {
             else{
                 add = val%level;
             }
-            add+=sum(head.left, level+1);
-            add+=sum(head.right, level+1);
+            add= add+sum(head.left, level+1);
+            add= add+sum(head.right, level+1);
             return add; //remove this line
         }
         //============================================================================
